@@ -2,7 +2,18 @@ var title = document.querySelector('.title');
 var courseFeatureElements = document.querySelectorAll('.course-feature');
 var button = document.querySelector('button');
 
-navigator.serviceWorker.register('/sw.js');
+// navigator.serviceWorker.register('/sw.js');
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/coba/sw.js') // pastikan path ini sesuai
+    .then(function(registration) {
+      console.log('Service Worker berhasil terdaftar di Matthewtri.github.io/coba/');
+    })
+    .catch(function(error) {
+      console.log('Pendaftaran Service Worker gagal:', error);
+    });
+}
+
 
 function animate() {
   title.classList.remove('animate-in');
