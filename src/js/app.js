@@ -5,14 +5,25 @@ var button = document.querySelector('button');
 // navigator.serviceWorker.register('/sw.js');
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/coba/sw.js') // pastikan path ini sesuai
+  navigator.serviceWorker.register('/coba/sw.js') // Register sw.js di direktori '/coba/'
     .then(function(registration) {
-      console.log('Service Worker berhasil terdaftar di Matthewtri.github.io/coba/');
+      console.log('Service Worker berhasil terdaftar untuk situs kedua');
     })
     .catch(function(error) {
       console.log('Pendaftaran Service Worker gagal:', error);
     });
 }
+
+
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('/coba/sw.js') // pastikan path ini sesuai
+//     .then(function(registration) {
+//       console.log('Service Worker berhasil terdaftar di Matthewtri.github.io/coba/');
+//     })
+//     .catch(function(error) {
+//       console.log('Pendaftaran Service Worker gagal:', error);
+//     });
+// }
 
 
 function animate() {
