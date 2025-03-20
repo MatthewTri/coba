@@ -3,10 +3,10 @@ self.addEventListener('install', function(event) {
       caches.open('second-app')
         .then(function(cache) {
           cache.addAll([
-            '/',
-            '/index.html',
-            '/src/css/app.css',
-            '/src/js/app.js'
+            '/coba',
+            '/coba/index.html',
+            '/coba/src/css/app.css',
+            '/coba/src/js/app.js'
           ])
         })
     );
